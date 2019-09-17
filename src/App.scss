@@ -1,59 +1,105 @@
 .App {
-  
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .Form {
-  width: 320px;
-  margin: auto;
-  display: flex;
-  flex-direction:column;
-  align-self: center;
-padding-bottom: 40px;
-}
-.List {
   
-  align-items: center;
-  margin: 0  auto;
   display: flex;
   flex-direction: column;
+  button {
+    height: 38px;
+  }
+  input {
+  }
+}
+.List {
   align-items: center;
-li{
-  div {
-    border-left: 1px solid gray;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    div {
+      border-right: 1px solid #3e50b4;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-items: center;
+      padding-right: 5px;
+      margin-right: 5px;
+    }
     display: flex;
     align-items: center;
+
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 0;
+    width: 100%;
+    border-bottom: 1px solid #3e50b4;
+
+    .icon {
+      padding: 5px;
+      color: #F50057;
+      &:hover {
+        cursor: pointer;
+        background: #F0F1F9;
+        border-radius: 50%;
+      }
+    }
   }
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 18px;
-  margin: 0;
-  padding: 20px;
-  width: 600px;
-  border: 1px solid gray;
-  border-bottom: none;
- .icon {
-   &:hover{
-     cursor: pointer;
-     color: red !important
-   } 
- }
+
+  .green {
+    padding: 5px;
+    color: #00e676 !important;
+  }
+  .red {
+    padding: 5px;
+    color: #f50057 !important;
+  }
 }
+
+@media (max-width: 500px) {
+  .App {
+    .Form {
+      padding: 0 10px;
+      padding-top: 10px;
+    }
+    padding: 0px;
+  }
+  .List {
+    li {
+      
+      p {
+        margin: 0;
+        height: 100%;
+        padding-left: 10px;
+        width: 100%;
+        text-align:left ;
+      }
+      
+      flex-direction: row-reverse;
+      padding: 0;
+      div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        padding-right: 5px;
+        border-left:1px solid #3e50b4;
+        border-right: none; 
+        input {
+        }
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
 }

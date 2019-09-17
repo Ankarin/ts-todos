@@ -12,10 +12,16 @@ const handle = (e:any) => {
 
     return (
         <div className='Form'>
-           <br/>
-            < TextField id='input-todo' value={input} label='Type to do'  type='text' onChange={handle} />
+           
+           
+            <TextField fullWidth={true} id='input-todo' value={input} label='Type to do'  type='text' onChange={handle} />
             <br/>
-            <Button variant="contained" color="primary" onClick={()=>addTodo(input)} >Add</Button>
+            <Button variant="contained" color="secondary" onClick={()=>addTodo(input)} >Add</Button>
+            
+            
+            
+            
+
         </div>
     )
 }

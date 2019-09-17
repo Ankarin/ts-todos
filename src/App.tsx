@@ -54,8 +54,10 @@ const arr = [1,2,34]
 
   return (
     <div className="App">
+      <div className="wrapper">
      <Form addTodo={addTodo} />
      <List list={todos} deleteItem = {deleteItem} completed={completed}/>
+     </div>
     </div>
   );
 }

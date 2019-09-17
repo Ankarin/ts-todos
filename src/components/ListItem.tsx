@@ -19,12 +19,13 @@ let color = ''
 
   return (
     <div>
-      <li style={{color:`${color}`}}>
-        {item.title}
+      <li>
+       
         <div>
-         <Checkbox color="primary"  onClick={()=>completed(item.id)} checked={item.completed}/>{" "}
-        <HighlightOffIcon color="primary" className='icon' onClick={()=>deleteItem(item.id)}/>
+         <Checkbox color="primary" className={color} onClick={()=>completed(item.id)} checked={item.completed}/>{" "}
+        <HighlightOffIcon  className='icon' onClick={()=>deleteItem(item.id)}/>
         </div>
+        <p>{item.title}</p>
       </li>
     </div>
   );
