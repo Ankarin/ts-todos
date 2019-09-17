@@ -13,7 +13,7 @@ interface Props {
 }
 
 const List: React.FC<Props> = ({ list, deleteItem, completed }) => {
-  console.log(list);
+  
   return (
     <div className="List">
       <ul>
