@@ -14,7 +14,7 @@ const App: React.FC = () => {
       .then(res => {
         
         setTodos(res.data)});
-        // console.log(todos[0])
+        
   }, []);
 const addTodo = (newTodo:string) => {
   const arr =[{  userId:11,
@@ -45,11 +45,11 @@ setTodos(arr)
   const completed = (checkId:number) => {
 const arr = [...todos];
 arr[checkId-1].completed=!arr[checkId-1].completed
-console.log(arr[checkId])
+
 setTodos(arr)
   }
 
-const arr = [1,2,34]
+
 
 
   return (
