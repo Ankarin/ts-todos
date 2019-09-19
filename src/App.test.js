@@ -11,25 +11,4 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-const todo = {
-  userId: 1,
-    id: 1,
-    title: "text",
-    completed: false
-}
-
-const deleteItem = jest.fn(()=> {
-  todo.title = 'deleted'
-}) 
-let delButton 
-it('delete item', () => {
- 
-// const component = render(<App/>)
-const listItem = render (<ListItem completed={null} item={todo} deleteItem={deleteItem}/>)
-const deleteButton = listItem.getByTestId('delete')
-fireEvent.click(deleteButton)
-const content = listItem.getByTestId('item')
-expect(content).toHaveTextContent('text')
-
-})
 
