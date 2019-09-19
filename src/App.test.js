@@ -29,7 +29,7 @@ const listItem = render (<ListItem completed={null} item={todo} deleteItem={dele
 const deleteButton = listItem.getByTestId('delete')
 fireEvent.click(deleteButton)
 const content = listItem.getByTestId('item')
-expect(content).toHaveTextContent('texts')
+expect(content).toHaveTextContent('text')
 
 })
 

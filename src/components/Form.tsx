@@ -23,7 +23,7 @@ setInput('')
            
             <TextField data-testid='input' fullWidth={true} id='input-todo' value={input} label='Type to do'  type='text' onChange={handle} />
             <br/>
-            <Button   data-testid='button'  variant="contained" color="secondary" onClick={add} >Add</Button>
+            <Button   data-testid='addButton'  variant="contained" color="secondary" onClick={add} >Add</Button>
             
             
             
