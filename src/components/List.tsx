@@ -16,10 +16,10 @@ const List: React.FC<Props> = ({ list, deleteItem, completed }) => {
   
   return (
     <div className="List">
-      <ul>
+      <ul  data-testid='items'>
       {isArray(list)
         ? list.map(item => (
-            <ListItem key={item.id} item={item} deleteItem={deleteItem} completed={completed} />
+            <ListItem  key={item.id} item={item} deleteItem={deleteItem} completed={completed} />
           ))
         : null}
         </ul>

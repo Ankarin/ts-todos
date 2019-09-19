@@ -10,13 +10,20 @@ const handle = (e:any) => {
     setInput(e.target.value)
 }
 
+const add= () =>{
+    if(addTodo!=null) {
+        addTodo(input)
+    }
+setInput('')
+}
+
     return (
         <div className='Form'>
            
            
-            <TextField fullWidth={true} id='input-todo' value={input} label='Type to do'  type='text' onChange={handle} />
+            <TextField data-testid='input' fullWidth={true} id='input-todo' value={input} label='Type to do'  type='text' onChange={handle} />
             <br/>
-            <Button variant="contained" color="secondary" onClick={()=>addTodo(input)} >Add</Button>
+            <Button   data-testid='button'  variant="contained" color="secondary" onClick={add} >Add</Button>
             
             
             

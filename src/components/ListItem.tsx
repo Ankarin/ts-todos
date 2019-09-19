@@ -2,6 +2,7 @@ import React from "react";
 import { Checkbox } from "@material-ui/core";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import Item from '../item.interfase'
+import { isObject } from "util";
 export interface Props {
   item: Item;
   deleteItem:any,
@@ -10,10 +11,15 @@ export interface Props {
 
 const ListItem: React.FC<Props> = ({ item, deleteItem, completed }) => {
 let color = ''
-    if(item.completed) 
-    color =  'green'
-    else 
-   color =  'red'
+ const colorist = () =>{
+  if(item.completed) 
+  color =  'green'
+  else 
+ color =  'red'
+ }  
+  if(isObject(item)) {
+colorist()
+  }
 
 
 
@@ -23,9 +29,9 @@ let color = ''
        
         <div>
          <Checkbox color="primary" className={color} onClick={()=>completed(item.id)} checked={item.completed}/>{" "}
-        <HighlightOffIcon  className='icon' onClick={()=>deleteItem(item.id)}/>
+        <HighlightOffIcon data-testid='delete'  className='icon' onClick={()=>deleteItem(item.id)}/>
         </div>
-        <p>{item.title}</p>
+        <p data-testid='item'>{item.title}</p>
       </li>
     </div>
   );
